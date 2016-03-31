@@ -80,11 +80,10 @@ const supported_commands = {
     // - `data.meta`
     // - `data.components`
 
-    //! What to do with `data.attachments`?
-
     data.issues = data.issues.filter((issue) => ids.indexOf(issue.id) === -1);
     data.comments = data.comments.filter((comment) => ids.indexOf(comment.issue) === -1);
     data.logs = data.logs.filter((log) => ids.indexOf(log.issue) === -1);
+    data.attachments = data.attachments.filter((attachment) => ids.indexOf(attachment.issue) === -1);
 
     println(JSON.stringify(data));
   },
@@ -104,11 +103,10 @@ const supported_commands = {
     // - `data.meta`
     // - `data.components`
 
-    //! What to do with `data.attachments`?
-
     data.issues = data.issues.filter((issue) => ids.indexOf(issue.id) > -1);
     data.comments = data.comments.filter((comment) => ids.indexOf(comment.issue) > -1);
     data.logs = data.logs.filter((log) => ids.indexOf(log.issue) > -1);
+    data.attachments = data.attachments.filter((attachment) => ids.indexOf(attachment.issue) > -1);
 
     println(JSON.stringify(data));
   },
@@ -154,8 +152,6 @@ const supported_commands = {
     // - `data.versions`
     // - `data.meta`
     // - `data.components`
-
-    //! What to do with `data.attachments`?
     
     data.comments.forEach((comment) => {
       if (ids.indexOf(comment.issue) === -1) {
@@ -164,6 +160,12 @@ const supported_commands = {
     });
     
     // Logs don't have IDs but rather are associated with comments.
+    
+    data.attachments.forEach((attachment) => {
+      if (ids.indexOf(attachment.issue) === -1) {
+        println('Attachment ' + comment.path + ' is headless.');
+      }
+    });
   },
   // Helper for running finddup, findgap and findheadless.
   check (data, args) {

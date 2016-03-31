@@ -115,7 +115,7 @@ Notes
 To-do
 -----
 
-- [ ] Handle `data.attachments` appropriately. (Currently I don't have a db file that has anything in `data.attachments` so I don't know the structure of its children.)
+- [x] Handle `data.attachments` appropriately. (Currently I don't have a db file that has anything in `data.attachments` so I don't know the structure of its children.)
 - [ ] Support merging two db files. (In case people want to put issues from two repos into one.)
 
 License
