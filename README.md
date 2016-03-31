@@ -97,7 +97,7 @@ List result after reassigning:
 $ node bitbucket_issues_editor.js db-1.0.json check
 ```
 
-This command will check to see if there are any gaps or duplicates in issue IDs, and will also check to see if any comments are headless (i.e. belong to a non-existing issue).
+This command will check to see if there are any gaps or duplicates in issue IDs, and will also check to see if any data is headless (i.e. belongs to a non-existing issue).
 
 You could also run individual checks separately:
 ```Bash
