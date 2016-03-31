@@ -69,7 +69,8 @@ This command outputs the result JSON file in `stdout`.
 
 List result after removing:
 ```Bash
-#1 Issue B title
+#3 Issue A title
+#2 Issue C title
 ```
 
 ### Reassign new issue IDs so there are no gaps caused by removing:
