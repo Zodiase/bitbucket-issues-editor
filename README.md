@@ -108,15 +108,15 @@ $ node bitbucket_issues_editor.js db-1.0.json findheadless
 Notes
 -----
 
-* Command names are case-sensitive.
-* This tool does not yet support to be used as a module.
-* Don't output the result to the source file as that would empty the source file before the code can actually read from it.
+- Command names are case-sensitive.
+- This tool does not yet support to be used as a module.
+- Don't output the result to the source file as that would empty the source file before the code can actually read from it.
 
 To-do
 -----
 
-[ ] Handle `data.attachments` appropriately. (Currently I don't have a db file that has anything in `data.attachments` so I don't know the structure of its children.)
-[ ] Support merging two db files. (In case people want to put issues from two repos into one.)
+- [ ] Handle `data.attachments` appropriately. (Currently I don't have a db file that has anything in `data.attachments` so I don't know the structure of its children.)
+- [ ] Support merging two db files. (In case people want to put issues from two repos into one.)
 
 License
 -------
